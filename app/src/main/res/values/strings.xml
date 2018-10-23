@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="Name">Name</string>
+    <string name="Age">age</string>
+    <string name="EMail">E-mail</string>
+    <string name="Password">Password</string>
+    <string name="Register">Register</string>
+    <string name="Back">Back</string>
+    <string name="Select">Select</string>
+    <string name="Welcome">Welcome to  my Application!</string>
+    <string name="Welcome1">Mobile Application 13011212 Kim Duk Young</string>
+</resources>
