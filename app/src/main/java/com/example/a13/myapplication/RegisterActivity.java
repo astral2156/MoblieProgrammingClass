@@ -26,7 +26,7 @@ public class RegisterActivity extends Activity {
         final EditText emailText = (EditText) findViewById(R.id.editEmail);
         final EditText passText = (EditText) findViewById(R.id.editPassword);
 
-        //저장 버튼
+        //저장 버튼 completed
         Button entryButton = (Button) findViewById(R.id.saveBtn); //add member in DB
         entryButton.setOnClickListener(new View.OnClickListener() {
 
@@ -51,7 +51,7 @@ public class RegisterActivity extends Activity {
                 }
             }
         });
-        //업뎃 버튼
+        //업뎃 버튼 completed
         Button updateButton = (Button) findViewById(R.id.updateBtn);
         updateButton.setOnClickListener(new View.OnClickListener() {
 
@@ -59,6 +59,8 @@ public class RegisterActivity extends Activity {
             public void onClick(View v) {
                 String id = idText.getText().toString();
                 String age = ageText.getText().toString();
+                String email = emailText.getText().toString();
+                String password = passText.getText().toString();
 
                 if (id.equals("")) {
                     Toast.makeText(RegisterActivity.this, "Please Input id",
@@ -66,18 +68,21 @@ public class RegisterActivity extends Activity {
                 } else {
                     ContentValues updateValues = new ContentValues();
                     updateValues.put("age", age);
+                    updateValues.put("email", email);
+                    updateValues.put("password", password);
                     db.update("registeration", updateValues, "id=?", new String[]{id});
+                    Toast.makeText(RegisterActivity.this, "Update Successfully!",
+                            Toast.LENGTH_SHORT).show();
                 }
             }
         });
-        //삭제 버튼
+        //삭제 버튼 completed
         Button deleteButton = (Button) findViewById(R.id.deleteBtn);
         deleteButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 String id = idText.getText().toString();
-                String age = ageText.getText().toString();
 
                 if (id.equals("")) {
                     Toast.makeText(RegisterActivity.this, "Please Input id",
@@ -89,7 +94,7 @@ public class RegisterActivity extends Activity {
             }
         });
 
-        //모두 선택 버튼
+        //모두 선택 버튼 completed
         Button dataBaseButton = (Button) findViewById(R.id.selectallBtn);
         dataBaseButton.setOnClickListener(new View.OnClickListener() {
 
@@ -101,6 +106,8 @@ public class RegisterActivity extends Activity {
 
             }
         });
+
+        // 하나만 선택
         Button SelcectButton = (Button) findViewById(R.id.selectBtn);
         SelcectButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,20 +115,16 @@ public class RegisterActivity extends Activity {
                 String id = idText.getText().toString();
 
                 if (id.equals("")) {
-                    Toast.makeText(RegisterActivity.this, "Please Input id",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Please Input id", Toast.LENGTH_SHORT).show();
                 } else {
-                    Cursor c = db.rawQuery("Select * From registeration Where id='" + id + "'", null);
-                    if (c.moveToFirst()) {
-                        idText.setText(c.getString(1));
-                        ageText.setText(c.getString(2));
-                    } else {
-                        Toast.makeText(RegisterActivity.this, "Data Not Found",
-                                Toast.LENGTH_SHORT).show();
-                    }
+                       Cursor c = db.rawQuery("Select * From registeration Where id='" + id+ "'", null);
+                         if (c.moveToFirst()) {
+                             //Intent intent = new Intent(RegisterActivity.this, ShowDataBaseOnly.class);
+                             //startActivity(intent);
+                         } else {
+                             Toast.makeText(RegisterActivity.this, "No Date in DB", Toast.LENGTH_SHORT).show();
+                         }
 
-                    Intent intent = new Intent(RegisterActivity.this, ShowDataBaseOnly.class);
-                    startActivity(intent);
                 }
             }
         });
