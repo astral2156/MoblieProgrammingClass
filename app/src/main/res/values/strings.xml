@@ -9,4 +9,15 @@
     <string name="Select">Select</string>
     <string name="Welcome">Welcome to  my Application!</string>
     <string name="Welcome1">Mobile Application 13011212 Kim Duk Young</string>
+    <string name="title_activity_nav">NavActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="computer_engineer">Computer Engineer</string>
+    <string name="doctor">Doctor</string>
+    <string name="banker">Banker</string>
+    <string name="choose">Choose</string>
 </resources>

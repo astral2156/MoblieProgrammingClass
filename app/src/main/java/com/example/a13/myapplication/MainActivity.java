@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button CalcBtn, PrimeBtn;
+    Button CalcBtn, PrimeBtn, RSBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         CalcBtn=findViewById(R.id.calcBtn);
         PrimeBtn=findViewById(R.id.primeBtn);
+        RSBtn =findViewById(R.id.radioseekBtn);
 
         CalcBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, PrimeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        RSBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(MainActivity.this, RadioSeekCheckActivity.class);
                 startActivity(intent);
             }
         });
