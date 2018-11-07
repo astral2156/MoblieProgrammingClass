@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -29,6 +30,8 @@ public class RadioSeekCheckActivity extends AppCompatActivity{
         int mood=0;
         Intent intent;
 
+        CheckBox cb1,cb2,cb3,cb4;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -42,6 +45,10 @@ public class RadioSeekCheckActivity extends AppCompatActivity{
             radio3 =(RadioButton) findViewById(R.id.radioButton3);
             submit =(Button) findViewById(R.id.button);
             intent = getIntent();
+            cb1 = (CheckBox) findViewById(R.id.checkBox1);
+            cb2 = (CheckBox) findViewById(R.id.checkBox2);
+            cb3 = (CheckBox) findViewById(R.id.checkBox3);
+            cb4 = (CheckBox) findViewById(R.id.checkBox4);
             seekbarResult = (TextView) findViewById(R.id.seekBarResult);
 
             moodSeekbar = (SeekBar) findViewById(R.id.moodSeekBar);
@@ -86,12 +93,26 @@ public class RadioSeekCheckActivity extends AppCompatActivity{
                                 break;
 
                         }
-
+                        String a ="";
+                        if (cb1.isChecked()){
+                            a = a+"Mobile Programming\n";
+                        }
+                        if(cb2.isChecked()){
+                            a= a+"Database\n";
+                        }
+                        if(cb3.isChecked()){
+                            a= a+"Algorithms\n";
+                        }
+                        if(cb4.isChecked()){
+                            a= a+"Data Structure\n";
+                        }
                         Intent intent = new Intent(RadioSeekCheckActivity.this, DisplayActivity.class);
                         intent.putExtra("name", pName);
                         intent.putExtra("email",pEmail);
                         intent.putExtra("job",Job);
                         intent.putExtra("mood", mood);
+                        intent.putExtra("check",a);
+
                         startActivityForResult(intent,1);
 
                     }

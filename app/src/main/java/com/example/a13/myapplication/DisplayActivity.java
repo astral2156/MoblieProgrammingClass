@@ -18,12 +18,13 @@ public class DisplayActivity extends AppCompatActivity {
     final static int MOOD_REQUEST = 4;
 
     int type;
-    TextView name, email, job, mood;
+    TextView name, email, job, mood, subject;
     ImageView editNameIcon, editEmailIcon, editJobIcon, editMoodIcon;
 
     String pName;
     String pEmail;
     String pJob;
+    String pSubject;
     int pMood;
 
 
@@ -36,6 +37,7 @@ public class DisplayActivity extends AppCompatActivity {
         email =(TextView) findViewById(R.id.emailView);
         job = (TextView) findViewById(R.id.jobView);
         mood = (TextView) findViewById(R.id.moodView);
+        subject =(TextView) findViewById(R.id.subjectView);
 
         editNameIcon =(ImageView) findViewById(R.id.imageButton5);
         editEmailIcon =(ImageView) findViewById(R.id.imageButton6);
@@ -48,6 +50,7 @@ public class DisplayActivity extends AppCompatActivity {
         pEmail = intent.getStringExtra("email");
         pJob = intent.getStringExtra("job");
         pMood =intent.getIntExtra("mood",1);
+        pSubject =intent.getStringExtra("check");
 
         String k = String.valueOf(pMood);
 
@@ -55,6 +58,7 @@ public class DisplayActivity extends AppCompatActivity {
         email.setText(pEmail);
         job.setText(pJob);
         mood.setText(k);
+        subject.setText(pSubject);
 
 
     }
