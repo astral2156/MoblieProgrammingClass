@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -60,6 +61,36 @@ public class DisplayActivity extends AppCompatActivity {
         mood.setText(k);
         subject.setText(pSubject);
 
+        editNameIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DisplayActivity.this,RadioSeekCheckActivity.class);
+                startActivity(intent);
+            }
+        });
+        editEmailIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DisplayActivity.this,RadioSeekCheckActivity.class);
+                startActivity(intent);
+            }
+        });
+        editJobIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DisplayActivity.this,RadioSeekCheckActivity.class);
+                startActivity(intent);
+            }
+        });
+        editMoodIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DisplayActivity.this,RadioSeekCheckActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 
@@ -87,5 +118,6 @@ public class DisplayActivity extends AppCompatActivity {
         else{}
 
     }
+
 }
 
