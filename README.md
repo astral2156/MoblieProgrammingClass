@@ -1,8 +1,13 @@
 # MobileProgrammingClass
 
-## Login Activity Using Firebase & Various Activity.
-## This repository is for practicing.
-## You can use my code to study.
+
+
+### Login Activity Using Firebase & Various Activity.
+### This repository is for practicing.
+### You can use my code to study.
+
+
+
 
 ### PrimeNumber, Calculation, Radio Button, Seek bar, CheckBox, Tabbed Activity
 ### Google API, VideoActivity, Table View, Navigation Activity
