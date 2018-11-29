@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         TabBtn = findViewById(R.id.TabBtn);
         MapsBtn = findViewById(R.id.mapsBtn);
         VideoBtn = findViewById(R.id.videoBtn);
+        NaviBtn = findViewById(R.id.naviBtn);
 
 
         CalcBtn.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +72,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        NaviBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NavActivity.class); // should be change
+                startActivity(intent);
+            }
+        });
 
     }
 }
