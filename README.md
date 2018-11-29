@@ -3,14 +3,15 @@
 
 
 ### Login Activity Using Firebase & Various Activity.
-### This repository is for practicing.
-### You can use my code to study.
+
+ This repository is for practicing.
+You can use my code to study.
 
 
 
 
-### PrimeNumber, Calculation, Radio Button, Seek bar, CheckBox, Tabbed Activity
-### Google API, VideoActivity, Table View, Navigation Activity
+ PrimeNumber, Calculation, Radio Button, Seek bar, CheckBox, Tabbed Activity
+Google API, VideoActivity, Table View, Navigation Activity
 
 
 <img width="300" src="https://user-images.githubusercontent.com/37032956/49235936-7d2c3900-f43e-11e8-861b-d8d0db9801a7.PNG">
