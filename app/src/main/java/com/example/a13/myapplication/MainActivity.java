@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button CalcBtn, PrimeBtn, RSBtn;
+    Button CalcBtn, PrimeBtn, RSBtn, TabBtn, MapsBtn, VideoBtn, TableViewBtn, NaviBtn ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
         CalcBtn=findViewById(R.id.calcBtn);
         PrimeBtn=findViewById(R.id.primeBtn);
         RSBtn =findViewById(R.id.radioseekBtn);
+        TabBtn = findViewById(R.id.TabBtn);
+        MapsBtn = findViewById(R.id.mapsBtn);
+        VideoBtn = findViewById(R.id.videoBtn);
+
 
         CalcBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +47,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        TabBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Tabbed.class);
+                startActivity(intent);
+            }
+        });
+
+        MapsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MapsActivity.class); // should be change
+                startActivity(intent);
+            }
+        });
+
+        VideoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, VideoActivity.class); // should be change
+                startActivity(intent);
+            }
+        });
 
 
     }
