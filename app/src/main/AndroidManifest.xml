@@ -60,6 +60,7 @@
             android:name=".NavActivity"
             android:label="@string/title_activity_nav"
             android:theme="@style/AppTheme"></activity>
+        <activity android:name=".TableViewActivity"></activity>
     </application>
 
 </manifest>
