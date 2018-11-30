@@ -22,7 +22,7 @@ import java.util.TimerTask;
 public class PrimeActivity extends AppCompatActivity {
 
     EditText isText;//Allow user to type a long
-    TextView tv;//Show result of test
+    TextView tv, tv1, tv2;//Show result of test
     Button isitBtn;
     String  k;
     int a;
@@ -36,6 +36,9 @@ public class PrimeActivity extends AppCompatActivity {
         isText = (EditText) findViewById(R.id.isitText1);
         tv = (TextView) findViewById(R.id.isitTextView);
         isitBtn = findViewById(R.id.isitBtn);
+        tv1 = (TextView) findViewById(R.id.isitTextView1);
+        tv2 = (TextView) findViewById(R.id.isitTextView2);
+
 
         isitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +62,14 @@ public class PrimeActivity extends AppCompatActivity {
                     }
                 }
 
+                if(a>=0){ tv1.setText("Positive Number");}
+                else{ tv1.setText("Negative Number");}
+
+                if(a%2==0){tv2.setText("Even Number");}
+                else{tv2.setText("Odd Number");}
+
             }
         });
+
     }
 }

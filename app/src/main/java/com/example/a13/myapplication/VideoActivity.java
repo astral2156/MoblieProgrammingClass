@@ -14,9 +14,6 @@ import android.widget.VideoView;
 public class VideoActivity extends AppCompatActivity {
 
 
-    private Button buttonStart;
-    private MediaPlayer mediaPlayer;
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,17 +21,14 @@ public class VideoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_video);
 
         VideoView videoView = findViewById(R.id.videoView);
-//        this.buttonStart = findViewById(R.id.startBtn);
 
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(videoView);
 
-        Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getPath()+"/media/pr1.mp4"); // should be added
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.and);
 
         videoView.setMediaController(mediaController);
         videoView.setVideoURI(uri);
-        videoView.requestFocus();
-        videoView.start();
 
     }
 }
