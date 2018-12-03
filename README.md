@@ -31,5 +31,4 @@ Google Map Activity
 <img width="300" src="https://user-images.githubusercontent.com/37032956/49235949-81585680-f43e-11e8-8e1a-d7ca0fa72b10.PNG">
 Radio Button, Seek bar, CheckBox,
 
-<img width="300" src="https://user-images.githubusercontent.com/37032956/49235952-81585680-f43e-11e8-9a9b-973a503cc2fb.PNG">
-Navigation Activity
+
